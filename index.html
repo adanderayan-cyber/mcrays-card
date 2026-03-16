@@ -548,8 +548,8 @@
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
 // ── vCard data ──────────────────────────────────────────
-const email1 = "tenena.coulibaly@mcrayspartners.com";
-const email2 = "info@mcrayspartners.com";
+const email1 = atob("dGVuZW5hLmNvdWxpYmFseUBtY3JheXNwYXJ0bmVycy5jb20=");
+const email2 = atob("aW5mb0BtY3JheXNwYXJ0bmVycy5jb20=");
 
 const VCARD = [
   'BEGIN:VCARD',
@@ -560,11 +560,11 @@ const VCARD = [
   'TITLE:Associate Managing Partner',
   'TEL;TYPE=CELL,PREF:+2250708207066',
   'TEL;TYPE=CELL:+2250170505359',
-  'EMAIL;TYPE=work,pref:' + email1,
-  'EMAIL;TYPE=work:' + email2,
+  'EMAIL;TYPE=WORK,PREF:' + email1,
+  'EMAIL;TYPE=WORK:' + email2,
   'URL:https://www.mcrayspartners.com',
   'URL;TYPE=LinkedIn:https://www.linkedin.com/in/barthelemycoulibaly/',
-  'ADR;TYPE=work:;;Abidjan;;;Côte d’Ivoire',
+  'ADR;TYPE=WORK:;;Abidjan;;;Cote d Ivoire',
   'NOTE:Expert ONUDI/UE in Strategy & Finance. PhD Candidate in Green Finance. Chartered Accountant. Green Finance Specialist.',
   'END:VCARD'
 ].join('\n');
