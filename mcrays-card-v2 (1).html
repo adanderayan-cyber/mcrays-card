@@ -248,9 +248,60 @@
   .cc-arrow { color: var(--gray); opacity: .4; flex-shrink:0; }
   .cc-arrow svg { width:14px; height:14px; }
 
-  /* ═══════════════════════════════
-     ACTION BUTTONS
-  ═══════════════════════════════ */
+  /* ── EMAIL BUTTONS ── */
+  .email-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .email-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 16px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+    text-decoration: none;
+    color: var(--white);
+    transition: all .2s ease;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 4px 16px rgba(15,169,88,0.22);
+  }
+  .email-btn-alt {
+    background: linear-gradient(135deg, var(--dark) 0%, #2d2d2d 100%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+  }
+  .email-btn:hover, .email-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(15,169,88,0.3);
+  }
+  .email-btn-alt:hover, .email-btn-alt:active {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  }
+  .email-btn-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .email-btn-icon svg { width: 16px; height: 16px; }
+  .email-btn-content {
+    flex: 1; min-width: 0;
+    display: flex; flex-direction: column;
+  }
+  .email-btn-label {
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.75; margin-bottom: 2px;
+  }
+  .email-btn-value {
+    font-size: 0.8rem; font-weight: 400;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .email-btn-arrow { opacity: 0.5; flex-shrink: 0; }
+  .email-btn-arrow svg { width: 14px; height: 14px; }
+
+
   .action-section { padding: 0 20px 32px; }
   .action-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .action-btn {
@@ -440,17 +491,32 @@
         <div class="cc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
       </a>
 
-      <a href="/cdn-cgi/l/email-protection#3347565d565d521d5051735e5041524a40435241475d5641401d505c5e" class="contact-card">
-        <div class="cc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div class="cc-text">
-          <div class="cc-label">Email</div>
-          <div class="cc-value"><span class="__cf_email__" data-cfemail="3347565d565d521d5051735e5041524a40435241475d5641401d505c5e">[email&#160;protected]</span></div>
-          <div class="cc-value2"><span class="__cf_email__" data-cfemail="95fcfbf3fae6d5f8f6e7f4ece6e5f4e7e1fbf0e7e6bbf6faf8">[email&#160;protected]</span></div>
-        </div>
-        <div class="cc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </a>
+      <div class="email-btn-group">
+        <a href="mailto:tenena.cb@mcrayspartners.com" class="email-btn">
+          <span class="email-btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span class="email-btn-content">
+            <span class="email-btn-label">Email personnel</span>
+            <span class="email-btn-value">tenena.cb@mcrayspartners.com</span>
+          </span>
+          <span class="email-btn-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </span>
+        </a>
+        <a href="mailto:infos@mcrayspartners.com" class="email-btn email-btn-alt">
+          <span class="email-btn-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span class="email-btn-content">
+            <span class="email-btn-label">Email entreprise</span>
+            <span class="email-btn-value">infos@mcrayspartners.com</span>
+          </span>
+          <span class="email-btn-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </span>
+        </a>
+      </div>
 
       <a href="https://www.mcrayspartners.com" target="_blank" class="contact-card">
         <div class="cc-icon">
@@ -545,8 +611,8 @@
 
 </div><!-- /page -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── vCard data ──────────────────────────────────────────
 const VCARD = [
   'BEGIN:VCARD',
@@ -599,13 +665,3 @@ window.addEventListener('load', function() {
     new QRCode(document.getElementById('qrcode'), {
       text: 'https://www.mcrayspartners.com',
       width: 180,
-      height: 180,
-      colorDark: '#141414',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.L
-    });
-  }
-});
-</script>
-</body>
-</html>
